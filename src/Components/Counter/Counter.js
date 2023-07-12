@@ -7,21 +7,21 @@ function Counter(props) {
       return previousCount > 0 ? previousCount - 1 : 0;
     });
     const id = event.target.id.slice(7);
-    props.onCountChange(id,count);
+    props.onCountChange(id, count - 1);
   };
   const countIncreaseHandler = (event) => {
     setCount((previousCount) => {
       return previousCount + 1;
     });
-    const id = event.target.id.slice(10);
-props.onCountChange(id,count);
+    const id = event.target.id.slice(9);
+    props.onCountChange(id,count + 1);
   };
   return (
     <div>
       <p>{`Counter ${props.number}`}</p>
       <div>
         <button id={`reduce_${props.id}`} onClick={countDecreaseHandler}>-</button>
-        <p id={`value${props.id}`}>{props.count}</p>
+        <p id={`value${props.id}`}>{count}</p>
         <button id={`increase_${props.id}`} onClick={countIncreaseHandler}>+</button>
       </div>
     </div>

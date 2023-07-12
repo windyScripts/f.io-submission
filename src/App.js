@@ -15,9 +15,21 @@ function App() {
   const [counters, setCounters] = useState(DUMMY_COUNTERS);
   const countChangeHandler = (id, count) => {
     setCounters((previousCounters) => {
-      const changedEntry = previousCounters.filter((e) => e.id === id);
-      changedEntry.count = count;
-      return { ...previousCounters, changedEntry };
+      const counters = structuredClone(previousCounters)
+
+      const index = counters.findIndex((e) => {
+        return e.id === id
+      })
+      if(index === -1){
+        console.error(`no counter with index of ${id}`)
+      }
+
+      console.log({counters, index, counter: counters[index]})
+      // console.log({oldState: counters[index], count, counters})
+      counters[index] = { ...counters[index], count}
+      // console.log({newState: counters[index]},{counters}, "after update")
+      
+      return counters
     });
   };
 
