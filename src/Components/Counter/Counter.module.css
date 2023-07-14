@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 5px;
+    margin: 15px;
+    height: 35px;
 }
 
 .counterValue {
@@ -13,18 +14,25 @@
 
 .button {
     color: #ffffff;
+    border: unset;
+    width: 25px;
+    font-size: 25px;
 }
 
 .buttonLeft {
     background-color: #00337e;
+    border-top-left-radius:  5px;
+    border-bottom-left-radius:  5px;
 }
 
 .buttonRight {
     background-color: #00337e;
+    border-top-right-radius:  5px;
+    border-bottom-right-radius:  5px;
 }
 
 .value {
-    width: 35px;
-    height: 100%;
+    padding: 0 15px 0 15px;
+    width: 15px;
     text-align: center;
 }

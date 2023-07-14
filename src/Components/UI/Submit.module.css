@@ -1,6 +1,5 @@
 .section {
-    min-height: 190px;
-    padding-top: 50px;
+    min-height: 195px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,17 +8,19 @@
     border-left: 2px solid #00337e;
     border-right: 2px solid #00337e;
     padding: 50px;
+    background-color: #ffffff;
 }
 
 .button{
     background-color: #00337e;
     color: #ffffff;
-    /* border-radius: 15px; */
+    border: unset;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    height: 30px;
+    height: 40px;
+    font-size: 20px;
     width: 75%;
     margin: 5px auto;
 
