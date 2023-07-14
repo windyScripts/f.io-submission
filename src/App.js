@@ -23,11 +23,7 @@ function App() {
       if(index === -1){
         console.error(`no counter with index of ${id}`)
       }
-
-      console.log({counters, index, counter: counters[index]})
-      // console.log({oldState: counters[index], count, counters})
       counters[index] = { ...counters[index], count}
-      // console.log({newState: counters[index]},{counters}, "after update")
       
       return counters
     });
