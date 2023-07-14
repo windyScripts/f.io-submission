@@ -1,4 +1,5 @@
 import Counter from "../Counter/Counter";
+import classes from './Counters.module.css'
 
 function Counters(props) {
   const addCounterHandler = (event) => {
@@ -16,7 +17,7 @@ function Counters(props) {
     );
   };
   return (
-    <>
+    <section className={classes.section}>
       {props.counters.map((e) => (
         <Counter
           key={e.id}
@@ -26,10 +27,10 @@ function Counters(props) {
           onCountChange={props.onCountChange}
         />
       ))}
-      <button type="button" onClick={addCounterHandler}>
+      <button className={classes.button} type="button" onClick={addCounterHandler}>
         Add
       </button>
-    </>
+    </section>
   );
 }
 

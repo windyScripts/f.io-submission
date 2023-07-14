@@ -3,7 +3,7 @@ import { useState } from "react";
 import Counters from "./Components/UI/Counters";
 import Submit from "./Components/UI/Submit";
 
-import "./App.module.css";
+import classes from "./App.module.css";
 
 const DUMMY_COUNTERS = [
   { number: 1, id: crypto.randomUUID(), count: 0 },
@@ -30,14 +30,14 @@ function App() {
   };
 
   return (
-    <>
+    <main className={classes.main}>
       <Counters
         counters={counters}
         onSetCounters={setCounters}
         onCountChange={countChangeHandler}
       />
       <Submit counters={counters} />
-    </>
+    </main>
   );
 }
 

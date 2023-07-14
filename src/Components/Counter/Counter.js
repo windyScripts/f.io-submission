@@ -14,9 +14,9 @@ function Counter(props) {
     <div className={classes.counterMain}>
       <p>{`Counter ${props.number}`}</p>
       <div className={classes.counterValue}>
-        <button id={`reduce_${props.id}`} onClick={countDecreaseHandler}>-</button>
-        <p id={`value${props.id}`}>{props.count}</p>
-        <button id={`increase_${props.id}`} onClick={countIncreaseHandler}>+</button>
+        <button className={classes.buttonLeft+" "+classes.button} id={`reduce_${props.id}`} onClick={countDecreaseHandler}>-</button>
+        <p className={classes.value} id={`value${props.id}`}>{props.count}</p>
+        <button className={classes.buttonRight+" "+classes.button} id={`increase_${props.id}`} onClick={countIncreaseHandler}>+</button>
       </div>
     </div>
   );

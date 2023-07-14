@@ -1,9 +1,30 @@
-.counterMain{
+.counterMain {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
 }
 
-.counterValue{
+.counterValue {
     display: flex;
     flex-direction: row;
+    background-color: #d9d9d9;
+}
+
+.button {
+    color: #ffffff;
+}
+
+.buttonLeft {
+    background-color: #00337e;
+}
+
+.buttonRight {
+    background-color: #00337e;
+}
+
+.value {
+    width: 35px;
+    height: 100%;
+    text-align: center;
 }
