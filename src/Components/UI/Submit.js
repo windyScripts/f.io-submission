@@ -9,7 +9,7 @@ function Submit(props) {
   };
   return (
     <>
-      <button onClick={submitHandler}>submit</button>
+      <button onClick={submitHandler}>Submit</button>
       {counters.map((e) => (
         <Count key={e.id} id={e.id} count={e.count} number={e.number} />
       ))}

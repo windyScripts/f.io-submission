@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import classes from './Counter.module.css'
+
 function Counter(props) {
   const [count, setCount] = useState(props.count);
   const countDecreaseHandler = (event) => {
@@ -17,9 +19,9 @@ function Counter(props) {
     props.onCountChange(id,count + 1);
   };
   return (
-    <div>
+    <div className={classes.counterMain}>
       <p>{`Counter ${props.number}`}</p>
-      <div>
+      <div className={classes.counterValue}>
         <button id={`reduce_${props.id}`} onClick={countDecreaseHandler}>-</button>
         <p id={`value${props.id}`}>{count}</p>
         <button id={`increase_${props.id}`} onClick={countIncreaseHandler}>+</button>

@@ -1,0 +1,9 @@
+.counterMain{
+    display: flex;
+    flex-direction: row;
+}
+
+.counterValue{
+    display: flex;
+    flex-direction: row;
+}
